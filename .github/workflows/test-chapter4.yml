@@ -19,12 +19,12 @@ jobs:
 
       - name: Install library-backend dependencies
         working-directory: library-backend
-        run: npm install
+        run: npm ci
 
       - name: Install test dependencies
-        working-directory: tests
-        run: npm install
+        working-directory: tests-chapter4
+        run: npm ci
 
       - name: Run tests
-        working-directory: tests
+        working-directory: tests-chapter4
         run: npm test
