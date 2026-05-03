@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const resolvers = {
     Query: {
         allUsers: async (root, args) => {
-            return User.find({});
+            return User.find({n});
         },
         me: async (root, args, { currentUser }) => {
             if (!currentUser) {
