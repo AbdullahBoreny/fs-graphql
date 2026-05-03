@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const resolvers = {
     Query: {
         allUsers: async (root, args) => {
-            return User.find({n});
+            // return User.find({n});
         },
         me: async (root, args, { currentUser }) => {
             if (!currentUser) {
@@ -69,7 +69,7 @@ const resolvers = {
             return author.save();
 
         },
-        createUser: async (root, args) => {
+        // createUser: async (root, args) => {
             const user = new User({ username: args.username, favoriteGenre: args.favoriteGenre });
 
             return user.save()
